@@ -7,6 +7,7 @@ import appStore from './utils/appStore';
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Search from './components/Search';
 import MainContainer from './components/maincontainer';
+import Playlist from './components/Playlist';
 
 
 function App() {
@@ -21,7 +22,11 @@ function App() {
     ,{
     path: '/search' ,
     element:<Search/> , 
-    }]
+    }
+  ]
+  },{
+    path : '/playlist',
+    element : <Playlist/>
   }
  ])
   return (
