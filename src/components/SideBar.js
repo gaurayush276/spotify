@@ -7,6 +7,7 @@ import { GoPlus } from "react-icons/go";
 import { CiBoxList } from "react-icons/ci";
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleSideBar } from '../utils/sidebarSlice';
+import { Link } from 'react-router-dom';
 
 
 
@@ -26,11 +27,13 @@ const SideBar = () => {
         
                 <div className=' w-72  h-28 bg-zinc-900 rounded-xl m-3'> 
                  <ul className='p-6'>
-                     <li className=' font-semibold text-base  text-gray-300 hover:text-white pb-2 flex  items-center gap-2 mb-3 cursor-pointer'> 
-                     <GoHome className=' w-6 h-6'/>  <span> Home </span>
-                      </li>
-                     <li className=' font-semibold  text-base text-gray-300 hover:text-white flex items-center gap-2 cursor-pointer'> 
-                     <CiSearch className=' w-6 h-6' /> <span> Search</span> </li>
+                    <a href ='/'> <li className=' hover font-semibold text-base   pb-2 flex  items-center gap-2 mb-3 cursor-pointer'> 
+                     <GoHome className=' w-6 h-6'/>  <span className=' text-gray-300 hover:text-white' > Home </span>
+                      </li></a>
+                    <a href='/search'>
+                     <li className=' font-semibold  text-base  flex items-center gap-2 cursor-pointer'> 
+                     <CiSearch className=' w-6 h-6' /> <span  className=' text-gray-300 hover:text-white'> Search</span> </li>
+                     </a>
                  </ul>
                 </div>
                 <div className=' w-72  h-96 bg-zinc-900 rounded-xl m-3'>
